@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import SearchEngine from "./SearchEngine";
 
 import "../styles.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -84,6 +85,7 @@ function App() {
     <div className="App">
 
       {/* SearchEngine component */}
+      <SearchEngine query={query} setQuery={setQuery} search={search} />
 
       {weather.loading && (
         <>
